@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>İstanbul Tour Guide</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+    <script
+      src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"
+      charset="utf-8"
+    ></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="features">
+      <section id="start" class="active">
+        <h3>Welcome To İstanbul Tour Guide</h3>
+        <p>
+          Hello everyone! Here we just want to give you some information about
+          İstanbul. In this page we build a web-application. There are some
+        </p>
+      </section>
+      <section id="istanbul" class="active">
+        <h3>A Few Information About İstanbul</h3>
+        <p>
+          İstanbul is a metropol city of Turkey. İstanbul is a city which links
+          the 2 continents of Asia and Europe together.
+        </p>
+      </section>
+      <section id="location1" class="active">
+        <h3>Basilica Cistern</h3>
+        <p>
+          Constructed for Justinianus I, the Byzantium Emperor (527-565), this
+          big underground water reservoir is called as “Yerebatan Cistern” among
+          the public because of the underground marble columns. As there used to
+          be a basilica in the place of the cistern, it is also called Basilica
+          Cistern.
+        </p>
+        <p>
+          This mysterious venue is an integral part of the Istanbul itineraries
+          and has been visited -among others- by the US former President Bill
+          Clinton, Wim Kok the Prime Minister of the Netherlands, Lamberto Dini,
+          Former Minister of foreign Affairs of Italy, Göran Persson, Former
+          Prime Minister of Sweden and Thomas Klestil, Former prime Minister of
+          Austria until today.
+        </p>
+        <p>
+          Currently operated by Kültür A.Ş. (Culture Co.), one of the affiliates
+          of Istanbul Metropolitan Municipality, the Basilica Cistern functions
+          as a museum and is the home for many national and international
+          events.
+        </p>
+        <p>
+          Our museum is open seven days a week. Exceptionally, the first day of
+          religious holidays is opened at 13.00. Visiting hours are 09.00-18.30.
+        </p>
+        <img src="photos/yerebatansarnici.jpg" alt="Basilica Cistern" width="560"
+         height="280">
+      </section>
+      <section id="location2" class="active">
+        <h3>Hagia Sophia Museum</h3>
+        <p>
+          Hagia Sophia is the one of the most visited museums and most prominent
+          monuments in the world in terms of art and the history of
+          architecture. The original building was constructed by the most
+          important architects of the period (527-565), Anthemios (Tralles) and
+          Isidoros (Miletus), under the order of Emperor Justinianos.
+        </p>
+        <p>
+          It was used as a church for 916 years but, following the conquest of
+          Istanbul by Fatih Sultan Mehmed, the Hagia Sophia was converted into
+          mosque. Afterwards, it was used as a mosque for 482 years. Under the
+          order of Atatürk and the decision of the Council of Ministers, Hagia
+          Sophia was converted into a museum in 1935. Hagia Sophia is open for
+          visit every day. The winter visiting hours for the Hagia Sophia are
+          from 09.00 to 17.00, with the final entry being at 16.00. During the
+          summer, the visiting hours are between 09.00 and 19.00, with the final
+          entry being at 18.00.
+        </p>
+        <p>
+          Source is,<a
+            href="https://ayasofyamuzesi.gov.tr/en/about-us"
+            target="_blank"
+            ><em>Hagia Sophia Museum Page</em></a
+          >
+        </p>
+        <p>
+          Also we add here a button to go Hagia Sophia from Basilica Cistern.
+          Try this button.
+        </p>
+        <div class="overlay">
+          <button id="replay">Play</button>
+        </div>
+        <img src="photos/ayasofya.jpg" alt="Hagia Sophia" width="560"
+         height="280" >
+      </section>
+      <section id="location3" class="active">
+        <h3>Galata Tower</h3>
+        <p>
+          Galata Tower was built in 528. It is in the district of İstanbul and
+          one of the most important symbols of the city. From the tower, mainly
+          the coastal part of İstanbul, The Golden Horn and The Bosphorus can be
+          viewed panoramically.
+        </p>
+        <p>
+          The Galata Tower is open daily for sightseeing from 09.00 to 19.00.
+          The 9th floor of the Galata Tower serves as a cafeteria during the day
+          and as a restaurant in the evening. The Galata Tower restaurant is
+          open daily from 20.00 to 00.30.
+        </p>
+        <p>
+          Source:
+          <a href="http://www.galatakulesi.org/galata-kulesi/" target="_blank"
+            ><em>Galata Tower</em></a
+          >
+        </p>
+        <img src="photos/galata.png" alt="Galata Tower" width="560"
+         height="280" >
+      </section>
+      <section id="location4" class="active">
+        <h3>Suleymaniye Mosque</h3>
+        <p>
+        Built by the most important architect of Ottoman times, Architect Sinan, this superb monument is Istanbul's largest mosque complex. The mosque was built between 1550-1557 by Sultan Süleyman the Magneficent at the peak of the Ottoman Empire.
+         On the long list of Sinan's admired buildings, the Süleymaniye Mosque ranks among the top. The mosque crowns one of the Istanbul's seven hills.
+        </p>
+        <p>The Suleymaniye Mosque is part of a külliye consisting of a hospital, soup kitchen, hamam, library and medrese(religious school). It was the first mosque with four minarets. The rectangular outlay is similar to the Hagia Sophia but much more refined.
+         The stained glass Windows next to the mihraba re among the oldest and most beautiful works of art in Istanbul's history.
+        </p>
+        <p>
+          <a
+            href="http://www.3dmekanlar.com/en/suleymaniye-mosque.html"
+            target="_blank"
+            ><em>For Virtual Tour</em></a>
+        </p>
+        <img src="photos/suleymaniye.png" alt="Suleymaniye Mosque" width="560"
+         height="280">
+      </section>
+      <section id="location5" class="active">
+        <h3>Maiden Tower</h3>
+        <p>
+          The Maiden's Tower is located 150-200 meters off the shore of the
+          Salacak district in Üsküdar. Although it is not definite as to when
+          the Maiden's Tower was built, the tower's architectural style is said
+          by some sources to be from around 340 BCE.
+        </p>
+        <p>
+          Previous names of the Maiden's Tower were Damalis and Leandros.
+          Damalis is the name of the wife of the king of Athens,Kharis.When
+          Damalis died, she was buried on the shore, and the name Damalis was
+          given to the Tower. It was also known during Byzantine times as
+          "Arcla" which means "a little castle".
+        </p>
+        <p>
+          If you curious about stories or myhts of Maiden Tower, you should
+          check out
+          <a
+            href="http://www.kizkulesi.com.tr/Page/kiz-kulesi/hakkimizda"
+            target="_blank"
+            ><em>here</em></a
+          >
+        </p>
+        <img src="photos/kiz-kulesi.png" alt="Maiden Tower" width="560"
+         height="280">
+      </section>
+      <section id="location6" class="active">
+        <h3>Grand Bazaar</h3>
+        <p>
+          The Grand Bazaar in Istanbul is one of the largest and oldest covered
+          markets in the world, with 61 covered streets and over 4,000 shops on
+          a total area of 30,700 m2, attracting between 250,000 and 400,000
+          visitors daily. In 2014, it was listed No.1 among the world's
+          most-visited tourist attractions with 91,250,000 annual visitors. The
+          Grand Bazar at Istanbul is often regarded as one of the first shopping
+          malls of the world.
+        </p>
+        <p>
+          If you want to learn more information about Grand Bazaar or check out
+          the photos, you can visit
+          <a
+            href="https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul"
+            target="_blank"
+            ><em>here</em></a>
+        </p>
+        <img src="photos/grand.jpg" alt="Grand Bazaar" width="560"
+         height="280">
+      </section>
+      <section id="location7" class="active">
+        <h3>Dolmabahçe Palace</h3>
+        <p>
+          Dolmabahçe Palace located in the Beşiktaş district of Istanbul,
+          Turkey, on the European coast of the Bosphorus, served as the main
+          administrative center of the Ottoman Empire from 1856 to 1887 and 1909
+          to 1922.
+        </p>
+        <p>
+          Mustafa Kemal Atatürk spent the last days of his life in the palace as
+          his health deteriorated. He died at 9:05 A.M. on November 10, 1938, in
+          a bedroom located in the former harem area of the palace. All the
+          clocks in the palace were stopped and set to 9:05 after his death. The
+          clocks outside of his room now are set to the actual time in Turkey,
+          but the clock in the room in which he died still points to 9:05.
+        </p>
+        <iframe
+          src="https://giphy.com/embed/ssxUuhriUoGQ0"
+          width="480"
+          height="361"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+        <p><a href="https://giphy.com/gifs/ssxUuhriUoGQ0">via GIPHY</a></p>
+        <p>
+          Source:
+          <a
+            href="https://en.wikipedia.org/wiki/Dolmabah%C3%A7e_Palace"
+            target="_blank"
+            ><em>Wikipedia</em></a
+          >
+        </p>
+        <img src="photos/Dolmabahce.jpg" alt="Dolmabahce Palace" width="560"
+         height="280">
+      </section>
+      <section id="location8" class="active">
+        <h3>Bosphorus Tour</h3>
+        <p>
+          If the subject is Bosphorus Tour, there are lots of options about it.
+          You can go on a tour with ferries or yacht, you can go on a tour with
+          special tours or just with ferries belongs to city corporation.
+        </p>
+        <p>
+          You can view the
+          <a
+            href="http://en.sehirhatlari.istanbul/en/timetable/bosphorus-tours-404.html"
+            target="_blank"
+            ><em>Ferries Timetables</em></a
+          >.
+        </p>
+        <iframe
+          src="https://giphy.com/embed/2wRLHlmQnIKO04i8qU"
+          width="480"
+          height="270"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+        <p>
+          <a
+            href="https://giphy.com/gifs/europeanspaceagency-space-esa-european-agency-2wRLHlmQnIKO04i8qU"
+            >via GIPHY</a
+          >
+        </p>
+        <img src="photos/bogaz.jpg" alt="Bosphorus" width="560"
+         height="280">
+      </section>
+      <section id="location9" class="active">
+        <h3>Spice Bazaar</h3>
+        <p>
+          Located in the Eminönü district of İstanbul and covering an area of
+          384 blocks, the Egyptian Bazaar is part of the külliye of the New
+          Mosque stretches along Tahmis and Flower Market streets and New Mosque
+          street.
+        </p>
+        <p>Working Hours</p>
+        <p>Open: 08.00 Close: 19:30</p>
+        <p>Closed Days: 29 October and islamic religious holidays.</p>
+        <p>
+          Here is a
+          <a href="http://misircarsisi.org.tr/sanaltur/sanaltur/index.html"
+            >Virtual Tour</a
+          >
+        </p>
+        <img src="photos/misir.jpg" alt="Spice Bazaar" width="560"
+         height="280">
+      </section>
+      <section id="location10" class="active">
+        <h3>Topkapı Palace</h3>
+        <p>
+          Topkapı Palace is built a top the Byzantine acropolis on Sarayburnu at
+          the tip of the Istanbul peninsula. It is surrounded by the Sea of
+          Marmara, the Bosphorus and the Golden Horn. On the land side, the
+          palace is surrounded by 1,400-meter-long high encircling walls-known
+          as the “Royal Walls” (Sûr-ı Sultânî)-while on the side facing the sea
+          it is surrounded by Byzantine walls. The palace covers an area of
+          approximately 700,000 square meters, a major part of which area is set
+          aside for the Royal Gardens (Hasbahçe). The court of Topkapı Palace
+          proper is made up of two basic organizations: the Outer Palace (Bîrûn)
+          and the Inner Palace (Enderûn); the Harem was a part of the latter.
+        </p>
+        <p>
+          Within the Topkapı Palace complex are three main gates-the Imperial
+          Gate (Bâb-ı Hümâyûn), the Gate of Salutation (Bâbüsselâm), and the
+          Gate of Felicity (Bâbüssaâde)-four courtyards, the Harem, the Royal
+          Gardens-today known as the Rose Garden (Gülbahçe)-and various other
+          gardens.
+        </p>
+        <p>Opening in:</p>
+        <p>
+          Everyday except Tuesdays. Museum is also closed at first days of the
+          religious festive days until afternoon.
+        </p>
+        <img src="photos/topkapi.jpg" alt="Topkapı Palace" width="560"
+         height="280">
+      </section>
+      <section id="location11" class="active">
+        <h3>Çamlıca Tepesi</h3>
+        <p>
+          Çamlıca Hill, to differentiate from the nearby Little Çamlıca Hill,is
+          a hill in Üsküdar district of Istanbul. Situated on the Asian part of
+          the city at 268 m (879 ft) above sea level, Çamlıca Hill has a
+          panoramic view of the southern part of Bosphorus and the mouth of
+          Golden Horn.
+        </p>
+        <img src="photos/camlica.jpg" alt="Camlica Hill" width="560"
+         height="280">
+      </section>
+      <section id="location12" class="active">
+        <h3>Blue Mosque</h3>
+        <p>
+          The Blue Mosque (Called Sultanahmet Camii in Turkish) is an historical
+          mosque in Istanbul. The mosque is known as the Blue Mosque because of
+          blue tiles surrounding the walls of interior design.Mosque was built
+          between 1609 and 1616 years, during the rule of Ahmed I. just like
+          many other mosques, it also comprises a tomb of the founder, a madrasa
+          and a hospice.Besides still used as a mosque, the Sultan Ahmed Mosque
+          has also become a popular tourist attraction in Istanbul.
+        </p>
+        <p>
+          If you will visit there you should check
+          <a href="http://www.bluemosque.co/" target="_blank"> <em>this</em></a>
+          website to know the other things about Blue Mosque
+        </p>
+        <img src="photos/sultanahmet.jpg" alt="Sultanahmet Mosque" width="560"
+         height="280">
+      </section>
+      <div class="end">
+        <p>To Be Continued...</p>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
