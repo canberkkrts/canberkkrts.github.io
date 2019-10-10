@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #b0c1c9;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#map {
+  position: fixed;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+}
+#features {
+  width: 50%;
+  margin-left: 50%;
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+}
+section {
+  padding: 100px 50px 25px;
+  line-height: 25px;
+  border-bottom: 1px solid #ddd;
+  opacity: 1;
+  font-size: 20px;
+}
+#container {
+  height: 600px;
+  margin: 0 auto;
+}
+#welcome {
+  padding-top: 25px;
+}
+/* Add the capital city of Turkey layer 
+*/
+#ankaramarker {
+  background-image: url("images/ankara.jpg");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+#istmarker {
+  background-image: url("images/istanbul.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.overlay {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.overlay button {
+  font: 600 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background-color: #4f3a65;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.overlay button:hover {
+  background-color: #4f3a65;
+}
+.end {
+  padding: 20px 50px;
+  line-height: 25px;
+  font-size: 20px;
+}
